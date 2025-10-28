@@ -1,0 +1,189 @@
+.sidebar {
+  width: 320px;
+  background: #0a0a0a;
+  border-left: 1px solid #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Mini Calendar */
+.mini-calendar {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.mini-calendar-header {
+  margin-bottom: 16px;
+}
+
+.mini-calendar-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+
+.mini-calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.mini-weekday {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #666666;
+  padding: 4px;
+}
+
+.mini-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.mini-day {
+  aspect-ratio: 1;
+  border: none;
+  background: transparent;
+  color: #888888;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mini-day:hover {
+  background: #2a2a2a;
+  color: #ffffff;
+}
+
+.mini-day.other-month {
+  opacity: 0.3;
+}
+
+.mini-day.today {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.mini-day.selected {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.event-indicator {
+  position: absolute;
+  bottom: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #3b82f6;
+}
+
+/* Event Details */
+.event-details {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1;
+}
+
+.event-details h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.detail-group {
+  margin-bottom: 16px;
+}
+
+.detail-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666666;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.detail-value {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.category-badge.work {
+  background: rgba(49, 116, 173, 0.3);
+  color: #3174ad;
+}
+
+.category-badge.personal {
+  background: rgba(72, 187, 120, 0.3);
+  color: #48bb78;
+}
+
+.category-badge.health {
+  background: rgba(237, 137, 54, 0.3);
+  color: #ed8936;
+}
+
+.category-badge.study {
+  background: rgba(159, 122, 234, 0.3);
+  color: #9f7aea;
+}
+
+.no-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  min-height: 300px;
+}
+
+.no-selection-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.no-selection-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #888888;
+  margin-bottom: 8px;
+}
+
+.no-selection-hint {
+  font-size: 13px;
+  color: #666666;
+}
